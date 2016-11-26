@@ -3,7 +3,7 @@
 const req = require('request')
 const RequestUtils = require('../util/requestUtils')
 
-class PageProvider {
+class RawPageProvider {
 
   /**
    * @param url string
@@ -15,17 +15,18 @@ class PageProvider {
   /**
    * @returns {Promise<String>}
    */
-  retrieve() {
+  provide() {
     return new Promise((resolve, reject) => {
       req(this.url, (err, response, body) => {
         if (RequestUtils.responseIsOK(err, response)) {
-          return reject(err)
+          reject(err)
         }
-
-        resolve(body)
+        else {
+          resolve(body)
+        }
       })
     })
   }
 }
 
-module.exports = PageProvider
+module.exports = RawPageProvider

@@ -1,6 +1,5 @@
 'use strict'
 
-const $ = require('cheerio')
 const BaseTransformer = require('./baseTransformer')
 
 class TitleTransformer extends BaseTransformer {
