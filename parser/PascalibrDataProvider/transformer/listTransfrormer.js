@@ -16,7 +16,7 @@ class ListTransformer extends BaseTransformer {
         .find('.subnav__link')
         .map((index, elem) => {
           return {
-            text: $(elem).text(),
+            title: $(elem).text(),
             link: $(elem).attr('href').replace('redesign.', '')
           }
         })

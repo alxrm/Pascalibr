@@ -15,7 +15,7 @@ ext {
 			playServices: "9.8.0",
 			retrofit    : "2.1.0",
 			stetho      : "1.4.1",
-			support     : "25.+",
+			support     : "25.0.1",
 			vksdk       : "1.6.7",
 			timber      : "4.3.1",
 			realm       : "2.2.1",
@@ -60,10 +60,10 @@ ext {
 	]
 
 	facebook = [
-			stetho: "com.facebook.stetho:stetho:$versions.stetho",
+			stetho      : "com.facebook.stetho:stetho:$versions.stetho",
 			stethoRhino : "com.facebook.stetho:stetho-js-rhino:$versions.stetho",
 			stethoOkhttp: "com.facebook.stetho:stetho-okhttp:$versions.stetho",
-			redex : "au.com.timmutton:redex:$versions.redex"
+			redex       : "au.com.timmutton:redex:$versions.redex"
 	]
 
 	playServices = [

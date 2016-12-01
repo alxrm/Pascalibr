@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply from: "${rootDir}/constants.gradle"
 
 android {
-	compileSdkVersion 25
+	compileSdkVersion targetSdk
 	buildToolsVersion "25.0.0"
 	defaultConfig {
 		applicationId "rm.com.pascalibr"
-		minSdkVersion 16
-		targetSdkVersion 25
+		minSdkVersion minSdk
+		targetSdkVersion targetSdk
 		versionCode 1
 		versionName "1.0"
 		vectorDrawables.useSupportLibrary = true
