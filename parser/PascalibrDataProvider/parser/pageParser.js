@@ -1,16 +1,20 @@
 'use strict'
 
-
 const ProviderUtils = require('../util/providerUtils')
 const BaseParser = require('./baseParser')
 const TitleTransformer = require('../transformer/titleTransformer')
+const DescriptionTransformer = require('../transformer/descriptionTransformer')
+const ModuleTransformer = require('../transformer/moduleTransformer')
 
 class PageParser extends BaseParser {
 
-  constructor(pageUrl, title) {
+  constructor(pageUrl, name) {
     super()
+
     this.url = pageUrl
-    this.title = title
+    this.name = name
+
+    this.processPage = this.processPage.bind(this)
   }
 
   /**
@@ -19,39 +23,47 @@ class PageParser extends BaseParser {
   parse() {
     return ProviderUtils
         .provideHtmlFrom(this.url)
-        .then(this.parseTitle)
+        .then(this.processPage)
+  }
+
+  /**
+   *
+   * @param rawData string
+   * @returns object
+   */
+  processPage(rawData) {
+    if (this.hasModule(rawData)) return null
+
+    const title = this.processTitle(rawData)
+    const description = this.processDescription(rawData)
+
+    return {
+      title, description
+    }
   }
 
   /**
    * @param rawData string
    * @returns object
    */
-  parseTitle(rawData) {
-    const titleTransformer = new TitleTransformer(this.title)
-
-    console.log(titleTransformer.transform(rawData))
-
-    return titleTransformer.transform(rawData)
+  processTitle(rawData) {
+    return new TitleTransformer(this.name).transform(rawData)
   }
 
   /**
    * @returns object
    */
-  parseDescription(rawData) {
-
+  processDescription(rawData) {
+    return new DescriptionTransformer().transform(rawData)
   }
 
   /**
-   * @returns object
+   * @returns boolean
    */
-  parseModuleData(rawData) {
+  hasModule(rawData) {
+    const module = new ModuleTransformer().transform(rawData)
 
-  }
-  /**
-   * @returns object
-   */
-  parseCodeSnippet(rawData) {
-
+    return module.indexOf('Модуль') !== -1
   }
 }
 

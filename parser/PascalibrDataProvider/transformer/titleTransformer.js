@@ -5,9 +5,10 @@ const BaseTransformer = require('./baseTransformer')
 
 class TitleTransformer extends BaseTransformer {
 
-  constructor(title) {
+  constructor(name = '') {
     super()
-    this.title = title
+
+    this.name = name
   }
 
   /**
@@ -17,7 +18,7 @@ class TitleTransformer extends BaseTransformer {
   transform(raw) {
     const $ = cheerio.load(raw)
     const titleText = $('.entry-title').text()
-    const type = titleText.substr(0, titleText.indexOf(this.title))
+    const type = titleText.substr(0, titleText.indexOf(this.name)).trim()
 
     return { titleText, type }
   }

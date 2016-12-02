@@ -2,6 +2,8 @@
 
 class BaseTransformer {
 
+  constructor() {}
+
   /**
    * @param raw string
    * @returns object

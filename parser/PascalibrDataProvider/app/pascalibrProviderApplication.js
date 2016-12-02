@@ -13,7 +13,7 @@ class PascalibrProviderApplication {
 
   start() {
     this.listParser.parse().then(list => {
-      const pageParser = new PageParser(list[0].link, list[0].title)
+      const pageParser = new PageParser(list[2].link, list[2].name)
 
       pageParser.parse()
     })
