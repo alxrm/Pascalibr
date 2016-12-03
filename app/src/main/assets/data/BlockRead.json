@@ -1,0 +1,44 @@
+{
+  "title": {
+    "titleText": "Процедура BlockRead",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Считывает одну или большее количество записей из файла в переменную."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure BlockRead(Var F : File; Var Buf; Count :Word [; Var Result : Word]);  \r\n                 \r\nГде:\r\n\r\nF - нетипизированная файловая переменная \r\n\r\nBuf - любая переменная  \r\n\r\nCount - выражение типа \r\n\r\nWord Result - переменная типа Word."
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Процедура BlockRead считывает Count или меньшее количество записей из файла F в блок памяти, начинающийся с первого байта, занятого переменной Buf. Реальное количество прочитанных записей (меньшее или равное Count) возвращается в необязательном параметре Result. Если параметр Result не определен, то в случае, когда количество прочитанных записей не равно параметру Count, происходит ошибка ввода/вывода. Весь считанный блок занимает максимум Count * RecSize байт, где RecSize - размер записи, определяемый при открытии файла (или 128 байт, если размер записи не был определен). Если Count * RecSize больше, чем 64Кб, то происходит ошибка. Параметр Result является необязательным. Если весь запрошенный блок был считан, то Result будет равно Count. Иначе, в случае, если Result меньше, чем Count, то конец файла был достигнут прежде, чем было завершено и параметр RecSize был больше 1, то Result вернет количество целиком считанных записей. Указатель текущей позиции файла перемещается на количество записей, равное значению параметра Result. В режиме {$I-} функция IOResult вернет нуль, если операция была успешной, иначе, она вернет отличный от нуля код ошибки. Файл должен быть открыт."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Blockrd.PAS}                                                             \r\n \r\n  {Пример программы для процедур BlockRead и BlockWrite }\r\n \r\n  Uses WinCrt;\r\n \r\n  Program CopyFile;\r\n \r\n  { Простая программа быстрого копирования файлов БЕЗ проверки ошибок } \r\n \r\n  Var       FromF, ToF : File;\r\n   NumRead, NumWritten : Word; \r\n                   Buf : Array [1..2048] Of Char;\r\n  Begin \r\n   { Открываем входной файл }\r\n   Assign(FromF, ParamStr(1));\r\n   Reset(FromF, 1);  { Размер буфера записи = 1 байт }\r\n   { Открываем выходной файл }\r\n   Assign(ToF, ParamStr(2));\r\n   ReWrite(ToF, 1);  { Размер буфера записи = 1 байт } \r\n   WriteLn('Копирую ', FileSize(FromF), ' байт...');\r\n   Repeat\r\n    BlockRead(FromF, Buf, SizeOf(Buf), NumRead);\r\n    BlockWrite(ToF, Buf, NumRead, NumWritten);\r\n   Until (NumRead = 0) Or (NumWritten <> NumRead);\r\n   Close(FromF);\r\n   Close(ToF);\r\n  End."
+    }
+  ]
+}

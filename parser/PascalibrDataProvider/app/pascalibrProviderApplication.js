@@ -26,7 +26,7 @@ class PascalibrProviderApplication {
         .then(() => new Promise(resolve => fs.readdir(RES_DIR, (err, files) => resolve(files))))
         .then(files => {
           return Promise.all(files.map(fileName => {
-            return new Promise((resolve) => {
+            return new Promise(resolve => {
               fs.readFile(RES_DIR + fileName, 'utf8', (err, data) => {
                 resolve({fileName, data: JSON.parse(data)})
               })

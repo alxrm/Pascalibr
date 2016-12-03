@@ -1,0 +1,44 @@
+{
+  "title": {
+    "titleText": "Функция Copy()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает подстроку строки."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function Copy(S : String; Index : Integer; Count : Integer) : String;\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр S - выражение со строковым типом. Index и Count - выражения целочисленного типа. Функция Copy возвращает подстроку строки S, содержащую Count символов, начиная с символа с номером Index. Если значение Index больше, чем длина строки S, то Copy возвращает пустую строку. Если значение Count больше, чем оставшееся количество символов в строке с позиции Index до конца строки, то возвращается Length(S)-Index символов."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Copy.PAS}\r\n \r\n { Пример программы для функции Copy } \r\n \r\n  Var S : String;\r\n \r\n  Begin\r\n  S:='ABCDEF';\r\n  S:=Copy(S, 2, 3); { 'BCD' }\r\nEnd."
+    }
+  ]
+}

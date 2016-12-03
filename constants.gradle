@@ -12,6 +12,7 @@ ext {
 			leakCanary  : "1.4-beta2",
 			butterknife : "8.4.0",
 			okHttp      : "3.2.0",
+			okio        : "1.11.0",
 			playServices: "9.8.0",
 			retrofit    : "2.1.0",
 			stetho      : "1.4.1",
@@ -55,6 +56,7 @@ ext {
 			retrofit           : "com.squareup.retrofit2:retrofit:$versions.retrofit",
 			dagger             : "com.google.dagger:dagger:$versions.dagger",
 			daggerCompiler     : "com.google.dagger:dagger-compiler:$versions.dagger",
+			okio               : "com.squareup.okio:okio:$versions.okio",
 			butterknife        : "com.jakewharton:butterknife:$versions.butterknife",
 			butterknifeCompiler: "com.jakewharton:butterknife-compiler:$versions.butterknife"
 	]
