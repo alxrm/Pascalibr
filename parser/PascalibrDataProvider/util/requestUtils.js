@@ -11,7 +11,6 @@ class RequestUtils {
   static responseIsOK(err, response) {
     return !err && response.statusCode !== 200
   }
-
 }
 
 module.exports = RequestUtils

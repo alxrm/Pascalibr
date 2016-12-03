@@ -6,6 +6,8 @@ const TitleTransformer = require('../transformer/titleTransformer')
 const DescriptionTransformer = require('../transformer/descriptionTransformer')
 const ModuleTransformer = require('../transformer/moduleTransformer')
 
+const fs = require('fs')
+
 class PageParser extends BaseParser {
 
   constructor(pageUrl, name) {
@@ -24,6 +26,14 @@ class PageParser extends BaseParser {
     return ProviderUtils
         .provideHtmlFrom(this.url)
         .then(this.processPage)
+        .then(data => {
+          if (data) fs.writeFile(`./result/${this.name.trim()}.json`, JSON.stringify(data))
+
+          return data
+        })
+        .catch(err => {
+          console.log('error', this.name, err)
+        })
   }
 
   /**
