@@ -1,4 +1,4 @@
-package rm.com.pascalibr.provider;
+package rm.com.pascalibr.data;
 
 import android.support.annotation.NonNull;
 

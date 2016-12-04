@@ -3,6 +3,8 @@ package rm.com.pascalibr;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import rm.com.pascalibr.ui.CatalogFragment;
+import rm.com.pascalibr.ui.MainActivity;
 
 /**
  * Created by alex
@@ -10,6 +12,7 @@ import dagger.Component;
 
 @Singleton
 @Component(modules = PascalibrModule.class)
-interface PascalibrComponent {
+public interface PascalibrComponent {
   void inject(MainActivity activity);
+  void inject(CatalogFragment fragment);
 }

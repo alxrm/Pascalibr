@@ -3,18 +3,17 @@ package rm.com.pascalibr;
 import android.content.res.AssetManager;
 import android.os.Handler;
 import android.os.Looper;
-
+import android.support.v7.widget.LinearLayoutManager;
 import com.google.gson.Gson;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
-import rm.com.pascalibr.provider.ArticleProvider;
-import rm.com.pascalibr.provider.CatalogProvider;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import javax.inject.Singleton;
+import rm.com.pascalibr.data.ArticleProvider;
+import rm.com.pascalibr.data.CatalogProvider;
+import rm.com.pascalibr.ui.adapter.ArticleAdapter;
+import rm.com.pascalibr.ui.adapter.CatalogAdapter;
 
 /**
  * Created by alex
@@ -27,6 +26,18 @@ final class PascalibrModule {
 
   PascalibrModule(PascalibrApplication app) {
     this.app = app;
+  }
+
+  @Provides @Singleton LinearLayoutManager provideLayoutManager() {
+    return new LinearLayoutManager(app.getApplicationContext());
+  }
+
+  @Provides @Singleton ArticleAdapter provideArticleAdapter() {
+    return new ArticleAdapter();
+  }
+
+  @Provides @Singleton CatalogAdapter provideCatalogAdapter() {
+    return new CatalogAdapter();
   }
 
   @Provides @Singleton Handler provideMainThreadHandler() {
@@ -45,15 +56,13 @@ final class PascalibrModule {
     return Executors.newSingleThreadExecutor();
   }
 
-  @Provides @Singleton CatalogProvider provideCatalog(
-      ExecutorService executorService, Handler mainThread, Gson gson, AssetManager assets
-  ) {
+  @Provides @Singleton CatalogProvider provideCatalog(ExecutorService executorService,
+      Handler mainThread, Gson gson, AssetManager assets) {
     return new CatalogProvider(executorService, mainThread, gson, assets);
   }
 
-  @Provides @Singleton ArticleProvider provideArticle(
-      ExecutorService executorService, Handler mainThread, Gson gson, AssetManager assets
-  ) {
+  @Provides @Singleton ArticleProvider provideArticle(ExecutorService executorService,
+      Handler mainThread, Gson gson, AssetManager assets) {
     return new ArticleProvider(executorService, mainThread, gson, assets);
   }
 }

@@ -1,7 +1,6 @@
 package rm.com.pascalibr.model;
 
 import android.support.annotation.NonNull;
-
 import java.util.ArrayList;
 
 /**

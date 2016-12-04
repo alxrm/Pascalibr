@@ -3,7 +3,6 @@ package rm.com.pascalibr.util;
 import android.content.res.AssetManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,8 @@ import java.io.InputStreamReader;
  */
 public final class Files {
 
-  private Files() {}
+  private Files() {
+  }
 
   @Nullable public static String readText(@NonNull AssetManager assets, @NonNull String path) {
     Conditions.checkNotNull(assets, "Assets are null");
@@ -25,8 +25,6 @@ public final class Files {
     } catch (IOException e) {
       Logger.e(e);
       return null;
-    } finally {
-      assets.close();
     }
   }
 

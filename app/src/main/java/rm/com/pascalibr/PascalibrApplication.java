@@ -13,13 +13,11 @@ public final class PascalibrApplication extends Application {
   @Override public void onCreate() {
     super.onCreate();
 
-    component = DaggerPascalibrComponent
-        .builder()
-        .pascalibrModule(new PascalibrModule(this))
-        .build();
+    component =
+        DaggerPascalibrComponent.builder().pascalibrModule(new PascalibrModule(this)).build();
   }
 
-  final PascalibrComponent injector() {
+  public final PascalibrComponent injector() {
     return component;
   }
 }
