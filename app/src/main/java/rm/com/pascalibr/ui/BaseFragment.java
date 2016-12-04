@@ -37,8 +37,14 @@ public abstract class BaseFragment extends Fragment {
 
   @NonNull abstract String getTitle();
 
-  @Nullable final protected MainActivity getOwner() {
+  @Nullable protected final MainActivity getOwner() {
     return (MainActivity) getActivity();
+  }
+
+  protected final void navigateTo(@NonNull BaseFragment fragment) {
+    final MainActivity owner = getOwner();
+
+    if (owner != null) owner.navigateTo(fragment);
   }
 
   final void updateTitle(String title) {

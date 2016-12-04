@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import butterknife.BindString;
 import butterknife.BindView;
 import java.util.List;
 import javax.inject.Inject;
@@ -19,18 +20,17 @@ import rm.com.pascalibr.data.CatalogProvider;
 import rm.com.pascalibr.data.ProviderListener;
 import rm.com.pascalibr.model.CatalogEntry;
 import rm.com.pascalibr.ui.adapter.CatalogAdapter;
+import rm.com.pascalibr.ui.holder.BaseHolder;
 
 /**
  * Created by alex
  */
-
 public final class CatalogFragment extends BaseFragment
-    implements ProviderListener<List<CatalogEntry>> {
-
-  private static String CATALOG_SOURCE_PATH = "data/Catalog.json";
+    implements ProviderListener<List<CatalogEntry>>, BaseHolder.OnClickListener<CatalogEntry> {
 
   @BindView(R.id.catalog_loader) ProgressBar loader;
   @BindView(R.id.catalog_list) RecyclerView catalog;
+  @BindString(R.string.path_catalog) String providerSource;
 
   @Inject CatalogProvider provider;
   @Inject CatalogAdapter adapter;
@@ -51,8 +51,9 @@ public final class CatalogFragment extends BaseFragment
 
   @Override public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
+    adapter.setOnClickListener(this);
     catalog.setAdapter(adapter);
-    provider.retrieve(CATALOG_SOURCE_PATH, this);
+    provider.retrieve(providerSource, this);
   }
 
   @Override public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -60,12 +61,15 @@ public final class CatalogFragment extends BaseFragment
     super.onCreateOptionsMenu(menu, inflater);
   }
 
-  @NonNull @Override String getTitle() {
+  @NonNull @Override final String getTitle() {
     return "Справочник";
   }
 
-  @Override public void onProvide(@NonNull List<CatalogEntry> payload) {
+  @Override public final void onProvide(@NonNull List<CatalogEntry> payload) {
     loader.setVisibility(View.GONE);
     adapter.updateData(payload);
+  }
+
+  @Override public final void onItemClick(@NonNull CatalogEntry item) {
   }
 }
