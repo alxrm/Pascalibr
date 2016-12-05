@@ -1,1 +1,36 @@
-{"title":{"titleText":"Процедура Randomize","type":"Процедура"},"description":[{"type":"text","data":"Инициализирует встроенный генератор случайных чисел."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Randomize;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"Uses Crt;\r\n \r\n  Begin\r\n   Randomize;\r\n   Repeat\r\n    { Выводим текст случайными цветами }\r\n    TextAttr:=Random(256);\r\n    Write('!');\r\n   Until KeyPressed;\r\n  End."}]}
+{
+  "title": {
+    "titleText": "Процедура Randomize",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Инициализирует встроенный генератор случайных чисел."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Randomize;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "Uses Crt;\r\n \r\n  Begin\r\n   Randomize;\r\n   Repeat\r\n    { Выводим текст случайными цветами }\r\n    TextAttr:=Random(256);\r\n    Write('!');\r\n   Until KeyPressed;\r\n  End."
+    }
+  ]
+}

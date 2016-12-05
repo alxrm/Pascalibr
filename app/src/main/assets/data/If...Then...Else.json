@@ -1,1 +1,40 @@
-{"title":{"titleText":"Конструкция If…Then…Else","type":"Конструкция"},"description":[{"type":"text","data":"Конструкция If...Then...Else определяет условия, при которых будет выполнен оператор."},{"type":"subtitle","data":"Синтаксис:"},{"type":"text","data":"If выражение Then оператор\r\n\r\nлибо:\r\n\r\nIf выражение Then оператор Else оператор"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Если булево выражение после слова If истинно, то оператор, следующий за словом Then будет выполнен."},{"type":"text","data":"В противном случае, если присутствует часть Else, то будет выполнен оператор, следующий за словом Else."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"(* Операторы If *)\r\n\r\nIf (IMax) Then I:=0;\r\n\r\nIf ParamCount<>2 Then\r\n Begin\r\n  WriteLn('Неверные параметры командной строки');\r\n  Halt(1);\r\n End\r\nElse\r\n Begin\r\n  ReadFile(ParamStr(1));\r\n  WriteFile(ParamStr(2));\r\n End;"}]}
+{
+  "title": {
+    "titleText": "Конструкция If…Then…Else",
+    "type": "Конструкция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Конструкция If...Then...Else определяет условия, при которых будет выполнен оператор."
+    },
+    {
+      "type": "subtitle",
+      "data": "Синтаксис:"
+    },
+    {
+      "type": "text",
+      "data": "If выражение Then оператор\r\n\r\nлибо:\r\n\r\nIf выражение Then оператор Else оператор"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Если булево выражение после слова If истинно, то оператор, следующий за словом Then будет выполнен."
+    },
+    {
+      "type": "text",
+      "data": "В противном случае, если присутствует часть Else, то будет выполнен оператор, следующий за словом Else."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "(* Операторы If *)\r\n\r\nIf (IMax) Then I:=0;\r\n\r\nIf ParamCount<>2 Then\r\n Begin\r\n  WriteLn('Неверные параметры командной строки');\r\n  Halt(1);\r\n End\r\nElse\r\n Begin\r\n  ReadFile(ParamStr(1));\r\n  WriteFile(ParamStr(2));\r\n End;"
+    }
+  ]
+}

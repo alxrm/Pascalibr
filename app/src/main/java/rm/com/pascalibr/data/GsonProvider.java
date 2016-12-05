@@ -18,6 +18,8 @@ public abstract class GsonProvider<T> {
   protected final Handler mainThreadHandler;
   protected final Gson gson;
 
+  protected volatile T cachedResult;
+
   public GsonProvider(@NonNull ExecutorService executor, @NonNull Handler mainThreadHandler,
       @NonNull Gson gson, @NonNull AssetManager assets) {
     this.executor = executor;
@@ -36,6 +38,7 @@ public abstract class GsonProvider<T> {
 
         Conditions.checkNotNull(result, "Result cannot be null");
 
+        cachedResult = result;
         sendResult(callback, result);
       }
     });
@@ -43,7 +46,7 @@ public abstract class GsonProvider<T> {
 
   @NonNull protected abstract T parse(String src);
 
-  protected void sendResult(final ProviderListener<T> callback, final T result) {
+  protected void sendResult(@NonNull final ProviderListener<T> callback, @NonNull final T result) {
     mainThreadHandler.post(new Runnable() {
       @Override public void run() {
         callback.onProvide(result);

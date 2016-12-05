@@ -1,1 +1,44 @@
-{"title":{"titleText":"Процедура InitWinCrt","type":"Процедура"},"description":[{"type":"text","data":"Создает окно CRT, если оно еще не было создано."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure InitWinCrt;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Процедура InitWinCrt автоматически вызывается, если вы использовали обращение к процедурам Read, ReadLn, Write или WriteLn для файла, который был назначен к CRT.\nInitWinCrt использует константы WindowOrg, WindowSize и ScreenSize, и переменную WindowTitle, чтобы определять характеристики создаваемого окна CRT."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{ Пример программы для процедуры InitWinCrt }\r\n{ Компилировать в режиме Windows }\r\n{ Используйте русские фонты в Win32 }\r\n\r\nUses Strings, WinCrt, WinDos;\r\n\r\nBegin\r\n StrCopy(WindowTitle, 'Окно, созданное с помощью InitWinCRT');\r\n WriteLn('Это окно создано вручную.');\r\n WriteLn('Посмотрите на заголовок окна !!!');\r\n InitWinCRT;\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Процедура InitWinCrt",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Создает окно CRT, если оно еще не было создано."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure InitWinCrt;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Процедура InitWinCrt автоматически вызывается, если вы использовали обращение к процедурам Read, ReadLn, Write или WriteLn для файла, который был назначен к CRT.\nInitWinCrt использует константы WindowOrg, WindowSize и ScreenSize, и переменную WindowTitle, чтобы определять характеристики создаваемого окна CRT."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{ Пример программы для процедуры InitWinCrt }\r\n{ Компилировать в режиме Windows }\r\n{ Используйте русские фонты в Win32 }\r\n\r\nUses Strings, WinCrt, WinDos;\r\n\r\nBegin\r\n StrCopy(WindowTitle, 'Окно, созданное с помощью InitWinCRT');\r\n WriteLn('Это окно создано вручную.');\r\n WriteLn('Посмотрите на заголовок окна !!!');\r\n InitWinCRT;\r\nEnd."
+    }
+  ]
+}

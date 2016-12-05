@@ -1,1 +1,52 @@
-{"title":{"titleText":"Процедура Erase","type":"Процедура"},"description":[{"type":"text","data":"Стирает внешний файл с диска."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Erase(Var F);\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Параметр F - файловая переменная любого файлового типа. Внешний файл, связанный с переменной F удаляется. В режиме {$I-} функция IOResult вернет нуль, если операция была успешна, иначе она вернет отличный от нуля код ошибки."},{"type":"subtitle","data":"Ограничения:"},{"type":"text","data":"Никогда не используйте Erase на открытом файле!"},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{ Пример программы для процедуры Erase }\r\n\r\nUses Dos, Crt;\r\n\r\nVar F : File;\r\n   Ch : Char;\r\n\r\nBegin\r\n { Получаем имя файла из командной строки }\r\n Assign(F, ParamStr(1));\r\n {$I-} { Отключаем контроль ошибок ввода/вывода }\r\n Reset(F);\r\n {$I+} { Включаем контроль ошибок ввода/вывода }\r\n If IOResult<>0 Then WriteLn('Не могу найти :', ParamStr(1))\r\n  Else\r\n Begin\r\n  Close(F);\r\n  Write('Удалять ', ParamStr(1), ' (y/n) ?');\r\n  ReadLn(Ch);\r\n  If UpCase(Ch)='Y' Then Erase(F);\r\n End;\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Процедура Erase",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Стирает внешний файл с диска."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Erase(Var F);\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр F - файловая переменная любого файлового типа. Внешний файл, связанный с переменной F удаляется. В режиме {$I-} функция IOResult вернет нуль, если операция была успешна, иначе она вернет отличный от нуля код ошибки."
+    },
+    {
+      "type": "subtitle",
+      "data": "Ограничения:"
+    },
+    {
+      "type": "text",
+      "data": "Никогда не используйте Erase на открытом файле!"
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{ Пример программы для процедуры Erase }\r\n\r\nUses Dos, Crt;\r\n\r\nVar F : File;\r\n   Ch : Char;\r\n\r\nBegin\r\n { Получаем имя файла из командной строки }\r\n Assign(F, ParamStr(1));\r\n {$I-} { Отключаем контроль ошибок ввода/вывода }\r\n Reset(F);\r\n {$I+} { Включаем контроль ошибок ввода/вывода }\r\n If IOResult<>0 Then WriteLn('Не могу найти :', ParamStr(1))\r\n  Else\r\n Begin\r\n  Close(F);\r\n  Write('Удалять ', ParamStr(1), ' (y/n) ?');\r\n  ReadLn(Ch);\r\n  If UpCase(Ch)='Y' Then Erase(F);\r\n End;\r\nEnd."
+    }
+  ]
+}

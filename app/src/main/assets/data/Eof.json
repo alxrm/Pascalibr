@@ -1,1 +1,44 @@
-{"title":{"titleText":"Функция Eof()","type":"Функция"},"description":[{"type":"text","data":"Возвращает состояние конца файла."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"{Типизированные или нетипизированные файлы:}\r\nFunction Eof(Var F) : Boolean;\r\n\r\n{Текстовые файлы:}\r\nFunction Eof(Var F : Text) : Boolean;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Параметр F (если определен) является переменной текстового файла. Если параметр F отсутствует, то подразумевается стандартная файловая переменная Input. Eof(F) возвращает значение True, если указатель текущей позиции файла находится вне последнего символа файла или если файл вообще не содержит компонентов, иначе, Eof(F) возвращает False. В режиме {$I-} функция IOResult вернет нуль, если операция была успешна, иначе она вернет отличный от нуля код ошибки."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{Пример программы для функций Eof, Read и Write}\r\n{текстовые файлы}\r\n\r\nUses Crt, Dos;\r\n\r\nVar F : Text;\r\n   Ch : Char;\r\n\r\nBegin\r\n {Получаем имя файла из командной строки}\r\n Assign(F, ParamStr(1));\r\n Reset(F);\r\n While Not EOF(F) Do\r\n Begin\r\n  Read(F, Ch);\r\n  Write(Ch);  {Выводим содержимое файла на экран}\r\n End;\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Функция Eof()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает состояние конца файла."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "{Типизированные или нетипизированные файлы:}\r\nFunction Eof(Var F) : Boolean;\r\n\r\n{Текстовые файлы:}\r\nFunction Eof(Var F : Text) : Boolean;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр F (если определен) является переменной текстового файла. Если параметр F отсутствует, то подразумевается стандартная файловая переменная Input. Eof(F) возвращает значение True, если указатель текущей позиции файла находится вне последнего символа файла или если файл вообще не содержит компонентов, иначе, Eof(F) возвращает False. В режиме {$I-} функция IOResult вернет нуль, если операция была успешна, иначе она вернет отличный от нуля код ошибки."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Пример программы для функций Eof, Read и Write}\r\n{текстовые файлы}\r\n\r\nUses Crt, Dos;\r\n\r\nVar F : Text;\r\n   Ch : Char;\r\n\r\nBegin\r\n {Получаем имя файла из командной строки}\r\n Assign(F, ParamStr(1));\r\n Reset(F);\r\n While Not EOF(F) Do\r\n Begin\r\n  Read(F, Ch);\r\n  Write(Ch);  {Выводим содержимое файла на экран}\r\n End;\r\nEnd."
+    }
+  ]
+}

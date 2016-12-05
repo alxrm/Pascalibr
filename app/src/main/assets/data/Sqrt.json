@@ -1,1 +1,44 @@
-{"title":{"titleText":"Функция Sqrt()","type":"Функция"},"description":[{"type":"text","data":"Возвращает квадратный корень аргумента."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Function Sqrt(X : Real) : Real;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"X - выражение вещественного типа. Результатом будет квадратный корень из X."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"  { Пример программы для функций Sqr и Sqrt }\r\n \r\n Begin\r\n  WriteLn('5 в квадрате равно ', Sqr(5));\r\n  WriteLn('Квадратный корень из 2-х равен ', Sqrt(2.0));\r\n End."}]}
+{
+  "title": {
+    "titleText": "Функция Sqrt()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает квадратный корень аргумента."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function Sqrt(X : Real) : Real;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "X - выражение вещественного типа. Результатом будет квадратный корень из X."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "  { Пример программы для функций Sqr и Sqrt }\r\n \r\n Begin\r\n  WriteLn('5 в квадрате равно ', Sqr(5));\r\n  WriteLn('Квадратный корень из 2-х равен ', Sqrt(2.0));\r\n End."
+    }
+  ]
+}

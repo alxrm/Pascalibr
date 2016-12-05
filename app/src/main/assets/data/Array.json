@@ -1,1 +1,44 @@
-{"title":{"titleText":"Зарезервированное слово Array","type":"Зарезервированное слово"},"description":[{"type":"text","data":"Определяет массив."},{"type":"subtitle","data":"Синтаксис:"},{"type":"text","data":"Array [тип_индексов] Of тип_элементов\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Позволяются несколько типов индексов, если они разделены запятыми. Элементы массива могут иметь любой тип, а тип индексов должен быть порядковым."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"Type IntList  = Array[1..100] Of Integer;\r\n      CharData = Array['A'..'Z'] Of Byte;\r\n        Matrix = Array[0..9, 0..9] Of Real;"}]}
+{
+  "title": {
+    "titleText": "Зарезервированное слово Array",
+    "type": "Зарезервированное слово"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Определяет массив."
+    },
+    {
+      "type": "subtitle",
+      "data": "Синтаксис:"
+    },
+    {
+      "type": "text",
+      "data": "Array [тип_индексов] Of тип_элементов\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Позволяются несколько типов индексов, если они разделены запятыми. Элементы массива могут иметь любой тип, а тип индексов должен быть порядковым."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "Type IntList  = Array[1..100] Of Integer;\r\n      CharData = Array['A'..'Z'] Of Byte;\r\n        Matrix = Array[0..9, 0..9] Of Real;"
+    }
+  ]
+}

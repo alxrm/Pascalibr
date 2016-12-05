@@ -1,1 +1,44 @@
-{"title":{"titleText":"Процедура ChDir","type":"Процедура"},"description":[{"type":"text","data":"Изменяет текущий каталог."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure ChDir(S : String);\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Текущий каталог изменяется на каталог, определенный параметром S. Если в S содержится указатель на дисковод, то текущий диск также изменяется. В режиме {$I-} функция IOResult вернет нуль, если операция была успешна,иначе, она вернет отличный от нуля код ошибки."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{Chdir.PAS}                                                                \r\n \r\n  { Пример программы для процедуры ChDir } \r\n \r\n  Begin\r\n   {$I-} { Отключаем контроль ошибок ввода/вывода }\r\n   { Получаем имя создаваемой директории с командной строки }\r\n   ChDir(ParamStr(1));\r\n   If IOResult<>0 Then WriteLn('Не могу создать директорию.');\r\n  End."}]}
+{
+  "title": {
+    "titleText": "Процедура ChDir",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Изменяет текущий каталог."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure ChDir(S : String);\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Текущий каталог изменяется на каталог, определенный параметром S. Если в S содержится указатель на дисковод, то текущий диск также изменяется. В режиме {$I-} функция IOResult вернет нуль, если операция была успешна,иначе, она вернет отличный от нуля код ошибки."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Chdir.PAS}                                                                \r\n \r\n  { Пример программы для процедуры ChDir } \r\n \r\n  Begin\r\n   {$I-} { Отключаем контроль ошибок ввода/вывода }\r\n   { Получаем имя создаваемой директории с командной строки }\r\n   ChDir(ParamStr(1));\r\n   If IOResult<>0 Then WriteLn('Не могу создать директорию.');\r\n  End."
+    }
+  ]
+}

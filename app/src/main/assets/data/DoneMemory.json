@@ -1,1 +1,28 @@
-{"title":{"titleText":"Процедура DoneMemory","type":"Процедура"},"description":[{"type":"text","data":"Освобождает память, занятую зоной безопасности."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure DoneMemory;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows"}]}
+{
+  "title": {
+    "titleText": "Процедура DoneMemory",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Освобождает память, занятую зоной безопасности."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure DoneMemory;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows"
+    }
+  ]
+}

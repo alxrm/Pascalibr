@@ -1,11 +1,9 @@
 package rm.com.pascalibr;
 
-import javax.inject.Singleton;
-
 import dagger.Component;
+import javax.inject.Singleton;
 import rm.com.pascalibr.ui.ArticleFragment;
 import rm.com.pascalibr.ui.CatalogFragment;
-import rm.com.pascalibr.ui.MainActivity;
 
 /**
  * Created by alex

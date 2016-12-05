@@ -1,1 +1,36 @@
-{"title":{"titleText":"Функция Length()","type":"Функция"},"description":[{"type":"text","data":"Возвращает динамическую длину строки."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Function Length(S : String) : Integer;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{ Пример программы для функции Length }\r\n\r\nUses WinCrt;\r\n\r\nVar S : String;\r\n\r\nBegin\r\n ReadLn(S);\r\n WriteLn('\"', S, '\"');\r\n WriteLn('Длина = ', Length(S));\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Функция Length()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает динамическую длину строки."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function Length(S : String) : Integer;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{ Пример программы для функции Length }\r\n\r\nUses WinCrt;\r\n\r\nVar S : String;\r\n\r\nBegin\r\n ReadLn(S);\r\n WriteLn('\"', S, '\"');\r\n WriteLn('Длина = ', Length(S));\r\nEnd."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 <resources>
-  <string name="app_name">Pascalibr</string>
+  <string name="app_name">Справочник</string>
   <string name="path_catalog">data/Catalog.json</string>
 </resources>

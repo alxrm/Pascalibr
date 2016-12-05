@@ -1,1 +1,44 @@
-{"title":{"titleText":"Функция CSeg()","type":"Функция"},"description":[{"type":"text","data":"Возвращает текущее значение регистра CS."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Function CSeg : Word;\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Результат типа Word - сегментная часть адреса сегмента кода, в котором была вызвана функция CSeg."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{CSeg.PAS}\r\n{ Пример программы для функций CSeg, DSeg, SSeg, SPtr, Ofs и Seg }\r\n \r\nUses WinCrt; \r\nvar I : Integer;\r\n\r\nProcedure WriteHexWord(W : Word);\r\n    Const HexChars : Array [0..$F] Of Char = '0123456789ABCDEF';\r\n    Begin\r\n        Write(HexChars[Hi(W) Shr 4], HexChars[Hi(W) And $F],\r\n        HexChars[Lo(W) Shr 4], HexChars[Lo(W) And $F]);\r\n    End;\r\n \r\nBegin\r\n    Write('Текущий сегмент кода : $');\r\n    WriteHexWord(CSeg);\r\n    WriteLn;\r\n    Write('Сегмент данных : $');\r\n    WriteHexWord(DSeg);\r\n    WriteLn;\r\n    Write('Сегмент стека $');\r\n    WriteHexWord(SSeg);\r\n    WriteLn;\r\n    Write('Указатель на стек : $');\r\n    WriteHexWord(SPtr);\r\n    WriteLn;\r\n    Write('Переменная I по смещению : $');\r\n    WriteHexWord(Ofs(I));\r\n    Write(' в сегменте : $');\r\n    WriteHexWord(Seg(I));\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Функция CSeg()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает текущее значение регистра CS."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function CSeg : Word;\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Результат типа Word - сегментная часть адреса сегмента кода, в котором была вызвана функция CSeg."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{CSeg.PAS}\r\n{ Пример программы для функций CSeg, DSeg, SSeg, SPtr, Ofs и Seg }\r\n \r\nUses WinCrt; \r\nvar I : Integer;\r\n\r\nProcedure WriteHexWord(W : Word);\r\n    Const HexChars : Array [0..$F] Of Char = '0123456789ABCDEF';\r\n    Begin\r\n        Write(HexChars[Hi(W) Shr 4], HexChars[Hi(W) And $F],\r\n        HexChars[Lo(W) Shr 4], HexChars[Lo(W) And $F]);\r\n    End;\r\n \r\nBegin\r\n    Write('Текущий сегмент кода : $');\r\n    WriteHexWord(CSeg);\r\n    WriteLn;\r\n    Write('Сегмент данных : $');\r\n    WriteHexWord(DSeg);\r\n    WriteLn;\r\n    Write('Сегмент стека $');\r\n    WriteHexWord(SSeg);\r\n    WriteLn;\r\n    Write('Указатель на стек : $');\r\n    WriteHexWord(SPtr);\r\n    WriteLn;\r\n    Write('Переменная I по смещению : $');\r\n    WriteHexWord(Ofs(I));\r\n    Write(' в сегменте : $');\r\n    WriteHexWord(Seg(I));\r\nEnd."
+    }
+  ]
+}

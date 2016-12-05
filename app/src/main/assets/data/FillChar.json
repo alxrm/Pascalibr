@@ -1,1 +1,56 @@
-{"title":{"titleText":"Процедура FillChar","type":"Процедура"},"description":[{"type":"text","data":"Заполняет определенное количество (Count) непрерывных байт определенным значением (типа Byte или Char)."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure FillChar(Var X; Count : Word; Value);"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"X - буфер, который нужно заполнить"},{"type":"text","data":"Count - количество символов"},{"type":"text","data":"Value - заполнитель (типа Byte или Char)"},{"type":"text","data":"Эта функция не выполняет проверки диапазона."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{Пример программы для процедуры FillChar}\r\n\r\nVar S : String[80];\r\nBegin\r\n { Заполняем строку пробелами }\r\n FillChar(S, SizeOf(S), ' ');\r\n S[0]:=#80;  { Устанавливаем байт длины }\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Процедура FillChar",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Заполняет определенное количество (Count) непрерывных байт определенным значением (типа Byte или Char)."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure FillChar(Var X; Count : Word; Value);"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "X - буфер, который нужно заполнить"
+    },
+    {
+      "type": "text",
+      "data": "Count - количество символов"
+    },
+    {
+      "type": "text",
+      "data": "Value - заполнитель (типа Byte или Char)"
+    },
+    {
+      "type": "text",
+      "data": "Эта функция не выполняет проверки диапазона."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Пример программы для процедуры FillChar}\r\n\r\nVar S : String[80];\r\nBegin\r\n { Заполняем строку пробелами }\r\n FillChar(S, SizeOf(S), ' ');\r\n S[0]:=#80;  { Устанавливаем байт длины }\r\nEnd."
+    }
+  ]
+}

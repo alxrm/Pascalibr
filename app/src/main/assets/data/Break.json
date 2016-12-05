@@ -1,1 +1,44 @@
-{"title":{"titleText":"Процедура Break","type":"Процедура"},"description":[{"type":"text","data":"Прерывает операторы циклов For, While или Repeat."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Break;\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Немедленно выходит из ближайшего цикла For, While или Repeat. Это напоминает оператор Goto, переходящий по метке, находящейся сразу после окончания оператора цикла. Компилятор сообщает об ошибке, если вызов Break не был сделан внутри циклов For, While или Repeat."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{ Пример программы для процедуры Break }\r\nUses Crt;\r\n\r\nVar\r\n S : String;\r\n\r\nBegin\r\n While True Do\r\n  Begin\r\n   ReadLn(S);\r\n   If S = '' Then Break;\r\n   WriteLn(S);\r\n  End;\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Процедура Break",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Прерывает операторы циклов For, While или Repeat."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Break;\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Немедленно выходит из ближайшего цикла For, While или Repeat. Это напоминает оператор Goto, переходящий по метке, находящейся сразу после окончания оператора цикла. Компилятор сообщает об ошибке, если вызов Break не был сделан внутри циклов For, While или Repeat."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{ Пример программы для процедуры Break }\r\nUses Crt;\r\n\r\nVar\r\n S : String;\r\n\r\nBegin\r\n While True Do\r\n  Begin\r\n   ReadLn(S);\r\n   If S = '' Then Break;\r\n   WriteLn(S);\r\n  End;\r\nEnd."
+    }
+  ]
+}

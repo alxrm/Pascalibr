@@ -50,7 +50,7 @@ public abstract class BaseContentFragment extends Fragment {
 
   @Override public void onResume() {
     super.onResume();
-    updateTitle(getTitle());
+    updateAppbar(getTitle());
   }
 
   @Override public void onDestroy() {
@@ -75,10 +75,9 @@ public abstract class BaseContentFragment extends Fragment {
     return (MainActivity) getActivity();
   }
 
-  @Nullable protected final ActionBar getActionbar() {
-    final MainActivity owner = getOwner();
-
-    return owner != null ? owner.getSupportActionBar() : null;
+  protected final void toggleContent(boolean show) {
+    content.setVisibility(show ? View.VISIBLE : View.GONE);
+    loader.setVisibility(show ? View.GONE : View.VISIBLE);
   }
 
   protected final void navigateTo(@NonNull BaseContentFragment fragment) {
@@ -87,12 +86,13 @@ public abstract class BaseContentFragment extends Fragment {
     if (owner != null) owner.navigateTo(fragment);
   }
 
-  final void updateTitle(String title) {
-    final ActionBar actionbar = getActionbar();
+  final void updateAppbar(String title) {
+    final MainActivity owner = getOwner();
+    final ActionBar supportBar = owner != null ? owner.getSupportActionBar() : null;
 
-    if (actionbar != null) {
-      actionbar.setTitle(title);
-      actionbar.setDisplayHomeAsUpEnabled(hasBackButton());
+    if (supportBar != null) {
+      supportBar.setTitle(title);
+      supportBar.setDisplayHomeAsUpEnabled(hasBackButton());
     }
   }
 }

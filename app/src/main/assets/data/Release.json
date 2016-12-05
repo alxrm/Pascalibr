@@ -1,1 +1,44 @@
-{"title":{"titleText":"Процедура Release","type":"Процедура"},"description":[{"type":"text","data":"Возвращает кучу в заданное состояние."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Release(Var P : Pointer);"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Protected,  Real"},{"type":"subtitle","data":"Ограничения:"},{"type":"text","data":"Нельзя использовать совместно с FreeMem или Dispose."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"Var        P : Pointer;\r\n   P1, P2, P3 : ^Integer;\r\n \r\n Begin\r\n  New(P1); { Распределяем память под Integer }\r\n  Mark(P); { Сохраняем состояние кучи }\r\n  New(P2); { Распределяем память под еще два числа типа Integer }\r\n  New(P3);\r\n  Release(P); { Память, резервированная для P2^ и P3^\r\n                освобождается, а память для P1^ все еще\r\n                может быть использована }\r\n End."}]}
+{
+  "title": {
+    "titleText": "Процедура Release",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает кучу в заданное состояние."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Release(Var P : Pointer);"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Ограничения:"
+    },
+    {
+      "type": "text",
+      "data": "Нельзя использовать совместно с FreeMem или Dispose."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "Var        P : Pointer;\r\n   P1, P2, P3 : ^Integer;\r\n \r\n Begin\r\n  New(P1); { Распределяем память под Integer }\r\n  Mark(P); { Сохраняем состояние кучи }\r\n  New(P2); { Распределяем память под еще два числа типа Integer }\r\n  New(P3);\r\n  Release(P); { Память, резервированная для P2^ и P3^\r\n                освобождается, а память для P1^ все еще\r\n                может быть использована }\r\n End."
+    }
+  ]
+}

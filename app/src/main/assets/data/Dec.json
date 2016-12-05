@@ -1,1 +1,60 @@
-{"title":{"titleText":"Процедура Dec","type":"Процедура"},"description":[{"type":"text","data":"Уменьшает значение переменной."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Dec(Var X[ ; N : Longint]);"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Параметр X - переменная перечислимого типа или переменная типа PChar, если допускается расширенный синтаксис, а N - выражение целочисленного типа. Значение X уменьшается на 1, если параметр N не определен, или на N, если праметр N определен, то есть Dec(X) соответствует X:=X-1, а Dec(X, N) соответствует X:=X-N."},{"type":"text","data":"С помощью Dec генерируется более оптимизированный код, особенно полезный в плотном цикле."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{Пример программы для процедуры Dec}\r\n\r\nVar\r\n IntVar : Integer;\r\n LongintVar : Longint;\r\n\r\nBegin\r\n IntVar:=10;\r\n WriteLn('До: IntVar=10');\r\n Dec(IntVar);\r\n WriteLn('После: IntVar=',IntVar);\r\n LongintVar:=1000000;\r\n WriteLn('До: LongintVar=', LongintVar);\r\n Dec(LongintVar, 5);\r\n WriteLn('После: LongintVar=', LongintVar);\r\n ReadLn\r\nEnd."},{"type":"subtitle","data":"Описание примера:"},{"type":"text","data":"Первоначально переменной IntVar присваивается значение 10. После выполнения Dec(IntVar) переменная IntVar уменьшается ровно на одну единицу, так как второй параметр не задан, т.е. значение IntVar будет равно IntVar=10-1=9."},{"type":"text","data":"В строке Dec(LongintVar, 5) задан второй параметр, который равен 5. То есть после выполнения процедуры значение переменной LongintVar уменьшится на 5 и будет равно: LongintVar=1000000-5=999995."}]}
+{
+  "title": {
+    "titleText": "Процедура Dec",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Уменьшает значение переменной."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Dec(Var X[ ; N : Longint]);"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр X - переменная перечислимого типа или переменная типа PChar, если допускается расширенный синтаксис, а N - выражение целочисленного типа. Значение X уменьшается на 1, если параметр N не определен, или на N, если праметр N определен, то есть Dec(X) соответствует X:=X-1, а Dec(X, N) соответствует X:=X-N."
+    },
+    {
+      "type": "text",
+      "data": "С помощью Dec генерируется более оптимизированный код, особенно полезный в плотном цикле."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Пример программы для процедуры Dec}\r\n\r\nVar\r\n IntVar : Integer;\r\n LongintVar : Longint;\r\n\r\nBegin\r\n IntVar:=10;\r\n WriteLn('До: IntVar=10');\r\n Dec(IntVar);\r\n WriteLn('После: IntVar=',IntVar);\r\n LongintVar:=1000000;\r\n WriteLn('До: LongintVar=', LongintVar);\r\n Dec(LongintVar, 5);\r\n WriteLn('После: LongintVar=', LongintVar);\r\n ReadLn\r\nEnd."
+    },
+    {
+      "type": "subtitle",
+      "data": "Описание примера:"
+    },
+    {
+      "type": "text",
+      "data": "Первоначально переменной IntVar присваивается значение 10. После выполнения Dec(IntVar) переменная IntVar уменьшается ровно на одну единицу, так как второй параметр не задан, т.е. значение IntVar будет равно IntVar=10-1=9."
+    },
+    {
+      "type": "text",
+      "data": "В строке Dec(LongintVar, 5) задан второй параметр, который равен 5. То есть после выполнения процедуры значение переменной LongintVar уменьшится на 5 и будет равно: LongintVar=1000000-5=999995."
+    }
+  ]
+}

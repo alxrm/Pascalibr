@@ -1,1 +1,44 @@
-{"title":{"titleText":"Процедура Arc","type":"Процедура"},"description":[{"type":"text","data":"Процедура Arc(X, Y, StAngle, EndAngle, Radius) рисует дугу окружности из точки с координатами XY начиная с угла StAngle и заканчиваю в EndAngle радиусом Radius."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Arc(X, Y : Integer; StAngle, EndAngle, Radius : Word);\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Real, Protected"},{"type":"subtitle","data":"Ограничения:"},{"type":"text","data":"Нужно быть в графическом режиме."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{Пример программы для процедуры Arc}\r\nUses Graph;\r\n\r\nVar Gd, Gm : Integer;\r\n    Radius : Integer;\r\nBegin\r\n\tGd:=Detect;\r\n\tInitGraph(Gd, Gm, '');\r\n\tIf GraphResult <> grOk Then Halt(1);\r\n\tFor Radius:=1 To 5 Do Arc(100, 100, 0, 90, Radius * 10);\r\n\tReadLn;\r\n\tCloseGraph\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Процедура Arc",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Процедура Arc(X, Y, StAngle, EndAngle, Radius) рисует дугу окружности из точки с координатами XY начиная с угла StAngle и заканчиваю в EndAngle радиусом Radius."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Arc(X, Y : Integer; StAngle, EndAngle, Radius : Word);\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Ограничения:"
+    },
+    {
+      "type": "text",
+      "data": "Нужно быть в графическом режиме."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Пример программы для процедуры Arc}\r\nUses Graph;\r\n\r\nVar Gd, Gm : Integer;\r\n    Radius : Integer;\r\nBegin\r\n\tGd:=Detect;\r\n\tInitGraph(Gd, Gm, '');\r\n\tIf GraphResult <> grOk Then Halt(1);\r\n\tFor Radius:=1 To 5 Do Arc(100, 100, 0, 90, Radius * 10);\r\n\tReadLn;\r\n\tCloseGraph\r\nEnd."
+    }
+  ]
+}

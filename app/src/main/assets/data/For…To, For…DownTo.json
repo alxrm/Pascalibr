@@ -1,1 +1,48 @@
-{"title":{"titleText":"Конструкция For…To, For…DownTo","type":"Конструкция"},"description":[{"type":"text","data":"Оператор For вызывает оператор, находящийся после слова Do, по одному разу для каждого значения в диапазоне от начального до конечного значений."},{"type":"subtitle","data":"Синтаксис:"},{"type":"text","data":"For переменная:=начальное To конечное Do оператор\r\n\r\nили\r\n\r\n For переменная:=начальное DownTo конечное Do оператор"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Переменная цикла и начальное и конечное значения должны иметь порядковый тип. Используйте составной оператор (Begin..End), чтобы выполнить в цикле несколько операторов."},{"type":"text","data":"To:"},{"type":"text","data":"Со словом To, значение переменной цикла увеличивается на 1 при каждой итерации цикла.\nDownTo:"},{"type":"text","data":"Со словом DownTo, значение переменной цикла уменьшено на 1 при каждой итерации цикла."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"(* For...To, For...DownTo *)\r\nFor I:=1 To ParamCount Do WriteLn(ParamStr(I);\r\n\r\nFor I:=1 To 10 Do\r\nFor J:=1 To 10 Do\r\n\tBegin\r\n\tX:=0;\r\n\tFor K:=1 To 10 Do X:=X+Mat1[I, K]*Mat2[K, J];\r\n\tMat[I, J]:=X;\r\nEnd;"}]}
+{
+  "title": {
+    "titleText": "Конструкция For…To, For…DownTo",
+    "type": "Конструкция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Оператор For вызывает оператор, находящийся после слова Do, по одному разу для каждого значения в диапазоне от начального до конечного значений."
+    },
+    {
+      "type": "subtitle",
+      "data": "Синтаксис:"
+    },
+    {
+      "type": "text",
+      "data": "For переменная:=начальное To конечное Do оператор\r\n\r\nили\r\n\r\n For переменная:=начальное DownTo конечное Do оператор"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Переменная цикла и начальное и конечное значения должны иметь порядковый тип. Используйте составной оператор (Begin..End), чтобы выполнить в цикле несколько операторов."
+    },
+    {
+      "type": "text",
+      "data": "To:"
+    },
+    {
+      "type": "text",
+      "data": "Со словом To, значение переменной цикла увеличивается на 1 при каждой итерации цикла.\nDownTo:"
+    },
+    {
+      "type": "text",
+      "data": "Со словом DownTo, значение переменной цикла уменьшено на 1 при каждой итерации цикла."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "(* For...To, For...DownTo *)\r\nFor I:=1 To ParamCount Do WriteLn(ParamStr(I);\r\n\r\nFor I:=1 To 10 Do\r\nFor J:=1 To 10 Do\r\n\tBegin\r\n\tX:=0;\r\n\tFor K:=1 To 10 Do X:=X+Mat1[I, K]*Mat2[K, J];\r\n\tMat[I, J]:=X;\r\nEnd;"
+    }
+  ]
+}

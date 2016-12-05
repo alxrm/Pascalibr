@@ -1,1 +1,44 @@
-{"title":{"titleText":"Функция Frac()","type":"Функция"},"description":[{"type":"text","data":"Возвращает дробную часть аргумента."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Function Frac(X : Real) : Real;\r\n"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Параметр X - выражение вещественного типа. Результат - дробная часть X, то есть Frac(X) = X-Int(X)."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{ Пример программы для функции Frac }\r\n\r\nVar R1, R2 : Real;\r\n\r\nBegin\r\n\tR1:=123.456;\r\n\tR2:=-123.456;\r\n\tR1:=Frac(R1);    { 0.456 }\r\n\tR2:=Frac(R2);   { -0.456 }\r\n\tWriteLn('Дробная часть R1 = ', R1);\r\n\tWriteLn('Дробная часть R2 = ', R2);\r\n\tReadLn      { Ждем нажатия клавиши }\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Функция Frac()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает дробную часть аргумента."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function Frac(X : Real) : Real;\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр X - выражение вещественного типа. Результат - дробная часть X, то есть Frac(X) = X-Int(X)."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{ Пример программы для функции Frac }\r\n\r\nVar R1, R2 : Real;\r\n\r\nBegin\r\n\tR1:=123.456;\r\n\tR2:=-123.456;\r\n\tR1:=Frac(R1);    { 0.456 }\r\n\tR2:=Frac(R2);   { -0.456 }\r\n\tWriteLn('Дробная часть R1 = ', R1);\r\n\tWriteLn('Дробная часть R2 = ', R2);\r\n\tReadLn      { Ждем нажатия клавиши }\r\nEnd."
+    }
+  ]
+}

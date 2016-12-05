@@ -1,1 +1,28 @@
-{"title":{"titleText":"Зарезервированное слово End","type":"Зарезервированное слово"},"description":[{"type":"text","data":"Зарезервированное слово End используется с Begin, Case, Record, Object и служит закрывающей операторной скобкой для блока кода."},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"\nBegin — для создания составного оператора\nCase — для создания оператора варианта\nRecord — при объявлении записи\nObject — при объявлении объекта\nAsm — для вызова встроенного ассемблера\n"},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"(* Begin *)\r\nIf First < Last Then\r\nBegin\r\n Temp:=First;\r\n First:=Last;\r\n Last:=Temp;\r\nEnd;\r\n\r\n(* Case *)\r\nCase Ch Of\r\n  'A'..'Z', 'a'..'z' : WriteLn('Буква');\r\n  '0'..'9'           : WriteLn('Цифра');\r\n  '+', '-', '*', '/' : WriteLn('Оператор');\r\nElse WriteLn('Специальный символ');\r\nEnd;\r\n\r\n(* Record *)\r\nType Class  = (Num, Dat, Str);\r\n     Date   = Record\r\n      D, M, Y : Integer;\r\n              End;\r\n      Facts = Record\r\n         Name : String[10];\r\n    Case Kind : Class Of\r\n           Num : (N : Real);\r\n           Dat : (D : Date);\r\n           Str : (S : String);\r\n              End;\r\n\r\n(* Object *)\r\nType LocationPtr = ^Location;\r\n        Location = Object\r\n              X, Y : Integer;\r\n    Procedure Init (PX, PY : Integer);\r\n     Function GetX : Integer;\r\n     Function GetY : Integer;\r\n                   End;\r\n\r\n(* Asm *)\r\nAsm\r\n mov ax, 01h\r\n mov cx, 00h\r\n int 10h\r\nEnd;"}]}
+{
+  "title": {
+    "titleText": "Зарезервированное слово End",
+    "type": "Зарезервированное слово"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Зарезервированное слово End используется с Begin, Case, Record, Object и служит закрывающей операторной скобкой для блока кода."
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "\nBegin — для создания составного оператора\nCase — для создания оператора варианта\nRecord — при объявлении записи\nObject — при объявлении объекта\nAsm — для вызова встроенного ассемблера\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "(* Begin *)\r\nIf First < Last Then\r\nBegin\r\n Temp:=First;\r\n First:=Last;\r\n Last:=Temp;\r\nEnd;\r\n\r\n(* Case *)\r\nCase Ch Of\r\n  'A'..'Z', 'a'..'z' : WriteLn('Буква');\r\n  '0'..'9'           : WriteLn('Цифра');\r\n  '+', '-', '*', '/' : WriteLn('Оператор');\r\nElse WriteLn('Специальный символ');\r\nEnd;\r\n\r\n(* Record *)\r\nType Class  = (Num, Dat, Str);\r\n     Date   = Record\r\n      D, M, Y : Integer;\r\n              End;\r\n      Facts = Record\r\n         Name : String[10];\r\n    Case Kind : Class Of\r\n           Num : (N : Real);\r\n           Dat : (D : Date);\r\n           Str : (S : String);\r\n              End;\r\n\r\n(* Object *)\r\nType LocationPtr = ^Location;\r\n        Location = Object\r\n              X, Y : Integer;\r\n    Procedure Init (PX, PY : Integer);\r\n     Function GetX : Integer;\r\n     Function GetY : Integer;\r\n                   End;\r\n\r\n(* Asm *)\r\nAsm\r\n mov ax, 01h\r\n mov cx, 00h\r\n int 10h\r\nEnd;"
+    }
+  ]
+}

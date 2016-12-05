@@ -1,1 +1,44 @@
-{"title":{"titleText":"Процедура Insert","type":"Процедура"},"description":[{"type":"text","data":"Вставляет подстроку в строку."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Procedure Insert(Source : String; Var S : String; Index : Integer);"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows, Real, Protected"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Параметр Source - выражение со строковым типом.\nПараметр S - переменная со строковым типом любой длины.\nIndex - выражение целочисленного типа.\nПроцедура Insert вставляет строку Source в строку S в позиции с номером Index.\n Если возникающая в результате строка длиннее 255-и символов, то она усекается после 255-го символа."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{ Пример программы для процедуры Insert }\r\n\r\nVar S : String;\r\n\r\nBegin\r\n S:='D00M forever !';\r\n Insert('& UNIX ', S, 6);\r\n WriteLn(S); { 'D00M & UNIX forever!' }\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Процедура Insert",
+    "type": "Процедура"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Вставляет подстроку в строку."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Procedure Insert(Source : String; Var S : String; Index : Integer);"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows, Real, Protected"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр Source - выражение со строковым типом.\nПараметр S - переменная со строковым типом любой длины.\nIndex - выражение целочисленного типа.\nПроцедура Insert вставляет строку Source в строку S в позиции с номером Index.\n Если возникающая в результате строка длиннее 255-и символов, то она усекается после 255-го символа."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{ Пример программы для процедуры Insert }\r\n\r\nVar S : String;\r\n\r\nBegin\r\n S:='D00M forever !';\r\n Insert('& UNIX ', S, 6);\r\n WriteLn(S); { 'D00M & UNIX forever!' }\r\nEnd."
+    }
+  ]
+}

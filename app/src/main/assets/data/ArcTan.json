@@ -1,44 +1,44 @@
 {
   "title": {
-	"titleText": "Функция ArcTan()",
-	"type": "Функция"
+    "titleText": "Функция ArcTan()",
+    "type": "Функция"
   },
   "description": [
-	{
-	  "type": "text",
-	  "data": "Возвращает арктангенс параметра."
-	},
-	{
-	  "type": "subtitle",
-	  "data": "Объявление:"
-	},
-	{
-	  "type": "text",
-	  "data": "Function ArcTan(X : Real) : Real;\r\n"
-	},
-	{
-	  "type": "subtitle",
-	  "data": "Режим:"
-	},
-	{
-	  "type": "text",
-	  "data": "Windows,  Protected,  Real"
-	},
-	{
-	  "type": "subtitle",
-	  "data": "Замечание:"
-	},
-	{
-	  "type": "text",
-	  "data": "В языке Turbo Pascal нет встроенной функции Tan, но тангенс может быть вычислен с помощью выражения: sin(x)/cos(x)"
-	},
-	{
-	  "type": "subtitle",
-	  "data": "Пример:"
-	},
-	{
-	  "type": "code",
-	  "data": "{Arctan.PAS}\r\n \r\n{ Пример программы для функции ArcTan }\r\n \r\nVar R : Real;\r\n \r\nBegin\r\n R:=ArcTan(Pi);\r\nEnd."
-	}
+    {
+      "type": "text",
+      "data": "Возвращает арктангенс параметра."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function ArcTan(X : Real) : Real;\r\n"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "В языке Turbo Pascal нет встроенной функции Tan, но тангенс может быть вычислен с помощью выражения: sin(x)/cos(x)"
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Arctan.PAS}\r\n \r\n{ Пример программы для функции ArcTan }\r\n \r\nVar R : Real;\r\n \r\nBegin\r\n R:=ArcTan(Pi);\r\nEnd."
+    }
   ]
 }

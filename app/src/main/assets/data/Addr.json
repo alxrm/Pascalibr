@@ -1,1 +1,44 @@
-{"title":{"titleText":"Функция Addr()","type":"Функция"},"description":[{"type":"text","data":"Возвращает адрес определённого объекта."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Function Addr(x) : Pointer ;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Параметр X - идентификатор переменной, процедуры и функции. Результат - указатель на X. Как и NIL, результат функции Addr совместим со всеми типами указателей."},{"type":"subtitle","data":"Пример:"},{"type":"code","data":"{Addr.PAS}\r\n{ Пример программы для функции Addr } \r\nvar P : Pointer;\r\n\r\nBegin\r\n    P:=Addr(P); { Указывает сам на себя !}\r\nEnd."}]}
+{
+  "title": {
+    "titleText": "Функция Addr()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает адрес определённого объекта."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function Addr(x) : Pointer ;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Параметр X - идентификатор переменной, процедуры и функции. Результат - указатель на X. Как и NIL, результат функции Addr совместим со всеми типами указателей."
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "{Addr.PAS}\r\n{ Пример программы для функции Addr } \r\nvar P : Pointer;\r\n\r\nBegin\r\n    P:=Addr(P); { Указывает сам на себя !}\r\nEnd."
+    }
+  ]
+}
