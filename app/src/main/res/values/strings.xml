@@ -1,5 +1,4 @@
 <resources>
   <string name="app_name">Pascalibr</string>
   <string name="path_catalog">data/Catalog.json</string>
-  <string name="path_article">data/%1$s</string>
 </resources>

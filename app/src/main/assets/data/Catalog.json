@@ -1,406 +1,406 @@
 [
   {
-    "fileName": "Abs.json",
+    "fileName": "data/Abs.json",
     "name": "Abs",
     "type": "Функция"
   },
   {
-    "fileName": "Addr.json",
+    "fileName": "data/Addr.json",
     "name": "Addr",
     "type": "Функция"
   },
   {
-    "fileName": "Arc.json",
+    "fileName": "data/Arc.json",
     "name": "Arc",
     "type": "Процедура"
   },
   {
-    "fileName": "ArcTan.json",
+    "fileName": "data/ArcTan.json",
     "name": "ArcTan",
     "type": "Функция"
   },
   {
-    "fileName": "Array.json",
+    "fileName": "data/Array.json",
     "name": "Array",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Assign.json",
+    "fileName": "data/Assign.json",
     "name": "Assign",
     "type": "Процедура"
   },
   {
-    "fileName": "Begin.json",
+    "fileName": "data/Begin.json",
     "name": "Begin",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Begin…End.json",
+    "fileName": "data/Begin…End.json",
     "name": "Begin…End",
     "type": "Конструкция"
   },
   {
-    "fileName": "BlockRead.json",
+    "fileName": "data/BlockRead.json",
     "name": "BlockRead",
     "type": "Процедура"
   },
   {
-    "fileName": "BlockWrite.json",
+    "fileName": "data/BlockWrite.json",
     "name": "BlockWrite",
     "type": "Процедура"
   },
   {
-    "fileName": "Boolean.json",
+    "fileName": "data/Boolean.json",
     "name": "Boolean",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Break.json",
+    "fileName": "data/Break.json",
     "name": "Break",
     "type": "Процедура"
   },
   {
-    "fileName": "CSeg.json",
+    "fileName": "data/CSeg.json",
     "name": "CSeg",
     "type": "Функция"
   },
   {
-    "fileName": "Case.json",
+    "fileName": "data/Case.json",
     "name": "Case",
     "type": "Оператор"
   },
   {
-    "fileName": "ChDir.json",
+    "fileName": "data/ChDir.json",
     "name": "ChDir",
     "type": "Процедура"
   },
   {
-    "fileName": "Char.json",
+    "fileName": "data/Char.json",
     "name": "Char",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Concat.json",
+    "fileName": "data/Concat.json",
     "name": "Concat",
     "type": "Функция"
   },
   {
-    "fileName": "Copy.json",
+    "fileName": "data/Copy.json",
     "name": "Copy",
     "type": "Функция"
   },
   {
-    "fileName": "Cos.json",
+    "fileName": "data/Cos.json",
     "name": "Cos",
     "type": "Функция"
   },
   {
-    "fileName": "Dec.json",
+    "fileName": "data/Dec.json",
     "name": "Dec",
     "type": "Процедура"
   },
   {
-    "fileName": "Delay.json",
+    "fileName": "data/Delay.json",
     "name": "Delay",
     "type": "Процедура"
   },
   {
-    "fileName": "Delete.json",
+    "fileName": "data/Delete.json",
     "name": "Delete",
     "type": "Процедура"
   },
   {
-    "fileName": "Dispose.json",
+    "fileName": "data/Dispose.json",
     "name": "Dispose",
     "type": "Процедура"
   },
   {
-    "fileName": "DoneMemory.json",
+    "fileName": "data/DoneMemory.json",
     "name": "DoneMemory",
     "type": "Процедура"
   },
   {
-    "fileName": "DosExitCode.json",
+    "fileName": "data/DosExitCode.json",
     "name": "DosExitCode",
     "type": "Функция"
   },
   {
-    "fileName": "Else.json",
+    "fileName": "data/Else.json",
     "name": "Else",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "End.json",
+    "fileName": "data/End.json",
     "name": "End",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Eof.json",
+    "fileName": "data/Eof.json",
     "name": "Eof",
     "type": "Функция"
   },
   {
-    "fileName": "Eoln.json",
+    "fileName": "data/Eoln.json",
     "name": "Eoln",
     "type": "Функция"
   },
   {
-    "fileName": "Erase.json",
+    "fileName": "data/Erase.json",
     "name": "Erase",
     "type": "Процедура"
   },
   {
-    "fileName": "Exclude.json",
+    "fileName": "data/Exclude.json",
     "name": "Exclude",
     "type": "Процедура"
   },
   {
-    "fileName": "Fail.json",
+    "fileName": "data/Fail.json",
     "name": "Fail",
     "type": "Процедура"
   },
   {
-    "fileName": "Far.json",
+    "fileName": "data/Far.json",
     "name": "Far",
     "type": "Процедура"
   },
   {
-    "fileName": "File.json",
+    "fileName": "data/File.json",
     "name": "File",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "FileSize.json",
+    "fileName": "data/FileSize.json",
     "name": "FileSize",
     "type": "Функция"
   },
   {
-    "fileName": "FillChar.json",
+    "fileName": "data/FillChar.json",
     "name": "FillChar",
     "type": "Процедура"
   },
   {
-    "fileName": "Forward.json",
+    "fileName": "data/Forward.json",
     "name": "Forward",
     "type": "Процедурная директива"
   },
   {
-    "fileName": "For…To, For…DownTo.json",
+    "fileName": "data/For…To, For…DownTo.json",
     "name": "For…To, For…DownTo",
     "type": "Конструкция"
   },
   {
-    "fileName": "Frac.json",
+    "fileName": "data/Frac.json",
     "name": "Frac",
     "type": "Функция"
   },
   {
-    "fileName": "GetDir.json",
+    "fileName": "data/GetDir.json",
     "name": "GetDir",
     "type": "Процедура"
   },
   {
-    "fileName": "GetMem.json",
+    "fileName": "data/GetMem.json",
     "name": "GetMem",
     "type": "Процедура"
   },
   {
-    "fileName": "Goto.json",
+    "fileName": "data/Goto.json",
     "name": "Goto",
     "type": "Оператор"
   },
   {
-    "fileName": "Hi.json",
+    "fileName": "data/Hi.json",
     "name": "Hi",
     "type": "Функция"
   },
   {
-    "fileName": "High.json",
+    "fileName": "data/High.json",
     "name": "High",
     "type": "Функция"
   },
   {
-    "fileName": "IOResult.json",
+    "fileName": "data/IOResult.json",
     "name": "IOResult",
     "type": "Функция"
   },
   {
-    "fileName": "If...Then...Else.json",
+    "fileName": "data/If...Then...Else.json",
     "name": "If...Then...Else",
     "type": "Конструкция"
   },
   {
-    "fileName": "InLine.json",
+    "fileName": "data/InLine.json",
     "name": "InLine",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Include.json",
+    "fileName": "data/Include.json",
     "name": "Include",
     "type": "Процедура"
   },
   {
-    "fileName": "Inherited.json",
+    "fileName": "data/Inherited.json",
     "name": "Inherited",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "InitWinCrt.json",
+    "fileName": "data/InitWinCrt.json",
     "name": "InitWinCrt",
     "type": "Процедура"
   },
   {
-    "fileName": "Insert.json",
+    "fileName": "data/Insert.json",
     "name": "Insert",
     "type": "Процедура"
   },
   {
-    "fileName": "Int.json",
+    "fileName": "data/Int.json",
     "name": "Int",
     "type": "Функция"
   },
   {
-    "fileName": "Interface.json",
+    "fileName": "data/Interface.json",
     "name": "Interface",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Interrupt.json",
+    "fileName": "data/Interrupt.json",
     "name": "Interrupt",
     "type": "Процедурная директива"
   },
   {
-    "fileName": "Label (Метка).json",
+    "fileName": "data/Label (Метка).json",
     "name": "Label (Метка)",
     "type": "Зарезервированное слово"
   },
   {
-    "fileName": "Length.json",
+    "fileName": "data/Length.json",
     "name": "Length",
     "type": "Функция"
   },
   {
-    "fileName": "Ln.json",
+    "fileName": "data/Ln.json",
     "name": "Ln",
     "type": "Функция"
   },
   {
-    "fileName": "Lo.json",
+    "fileName": "data/Lo.json",
     "name": "Lo",
     "type": "Функция"
   },
   {
-    "fileName": "Low.json",
+    "fileName": "data/Low.json",
     "name": "Low",
     "type": "Функция"
   },
   {
-    "fileName": "Mark.json",
+    "fileName": "data/Mark.json",
     "name": "Mark",
     "type": "Процедура"
   },
   {
-    "fileName": "MkDir.json",
+    "fileName": "data/MkDir.json",
     "name": "MkDir",
     "type": "Процедура"
   },
   {
-    "fileName": "Move.json",
+    "fileName": "data/Move.json",
     "name": "Move",
     "type": "Процедура"
   },
   {
-    "fileName": "New.json",
+    "fileName": "data/New.json",
     "name": "New",
     "type": "Процедура"
   },
   {
-    "fileName": "Random.json",
+    "fileName": "data/Random.json",
     "name": "Random",
     "type": "Функция"
   },
   {
-    "fileName": "Randomize.json",
+    "fileName": "data/Randomize.json",
     "name": "Randomize",
     "type": "Процедура"
   },
   {
-    "fileName": "ReWrite.json",
+    "fileName": "data/ReWrite.json",
     "name": "ReWrite",
     "type": "Процедура"
   },
   {
-    "fileName": "Read.json",
+    "fileName": "data/Read.json",
     "name": "Read",
     "type": "Процедура"
   },
   {
-    "fileName": "ReadLn.json",
+    "fileName": "data/ReadLn.json",
     "name": "ReadLn",
     "type": "Процедура"
   },
   {
-    "fileName": "RegisterValidate.json",
+    "fileName": "data/RegisterValidate.json",
     "name": "RegisterValidate",
     "type": "Процедура"
   },
   {
-    "fileName": "Release.json",
+    "fileName": "data/Release.json",
     "name": "Release",
     "type": "Процедура"
   },
   {
-    "fileName": "Rename.json",
+    "fileName": "data/Rename.json",
     "name": "Rename",
     "type": "Процедура"
   },
   {
-    "fileName": "Reset.json",
+    "fileName": "data/Reset.json",
     "name": "Reset",
     "type": "Процедура"
   },
   {
-    "fileName": "Round.json",
+    "fileName": "data/Round.json",
     "name": "Round",
     "type": "Функция"
   },
   {
-    "fileName": "RunError.json",
+    "fileName": "data/RunError.json",
     "name": "RunError",
     "type": "Процедура"
   },
   {
-    "fileName": "SPtr.json",
+    "fileName": "data/SPtr.json",
     "name": "SPtr",
     "type": "Функция"
   },
   {
-    "fileName": "SetWriteMode.json",
+    "fileName": "data/SetWriteMode.json",
     "name": "SetWriteMode",
     "type": "Процедура"
   },
   {
-    "fileName": "Sin.json",
+    "fileName": "data/Sin.json",
     "name": "Sin",
     "type": "Функция"
   },
   {
-    "fileName": "SizeOf.json",
+    "fileName": "data/SizeOf.json",
     "name": "SizeOf",
     "type": "Функция"
   },
   {
-    "fileName": "Sqr.json",
+    "fileName": "data/Sqr.json",
     "name": "Sqr",
     "type": "Функция"
   },
   {
-    "fileName": "Sqrt.json",
+    "fileName": "data/Sqrt.json",
     "name": "Sqrt",
     "type": "Функция"
   },
   {
-    "fileName": "Write.json",
+    "fileName": "data/Write.json",
     "name": "Write",
     "type": "Процедура"
   }

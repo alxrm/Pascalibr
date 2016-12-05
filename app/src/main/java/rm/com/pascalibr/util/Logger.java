@@ -9,11 +9,11 @@ import android.util.Log;
  */
 
 public final class Logger {
-
   private static final String LEVEL_DEBUG = "DEBUG";
   private static final String LEVEL_ERROR = "ERROR";
 
-  private Logger() {}
+  private Logger() {
+  }
 
   public static void d(@Nullable Object msg) {
     d(String.valueOf(msg != null ? msg : "null"));

@@ -1,1 +1,44 @@
-{"title":{"titleText":"Функция Random()","type":"Функция"},"description":[{"type":"text","data":"Возвращает случайное число."},{"type":"subtitle","data":"Объявление:"},{"type":"text","data":"Function Random [ ( Range : Word) ] : < тип параметра >;"},{"type":"subtitle","data":"Режим:"},{"type":"text","data":"Windows,  Protected,  Real"},{"type":"subtitle","data":"Замечание:"},{"type":"text","data":"Если параметр Range не определен, то результатом будет случайное число типа Real в диапазоне 0 \n                                                                                    Пример:\n                        Uses Crt;\r\n \r\n  Begin\r\n   Randomize;\r\n   Repeat\r\n    { Выводим текст случайными цветами }\r\n    TextAttr:=Random(256);\r\n    Write('!');\r\n   Until KeyPressed;\r\n  End.\n                                                        "}]}
+{
+  "title": {
+    "titleText": "Функция Random()",
+    "type": "Функция"
+  },
+  "description": [
+    {
+      "type": "text",
+      "data": "Возвращает случайное число."
+    },
+    {
+      "type": "subtitle",
+      "data": "Объявление:"
+    },
+    {
+      "type": "text",
+      "data": "Function Random [ ( Range : Word) ] : < тип параметра >;"
+    },
+    {
+      "type": "subtitle",
+      "data": "Режим:"
+    },
+    {
+      "type": "text",
+      "data": "Windows,  Protected,  Real"
+    },
+    {
+      "type": "subtitle",
+      "data": "Замечание:"
+    },
+    {
+      "type": "text",
+      "data": "Если параметр Range не определен, то результатом будет случайное число типа Real в диапазоне 0"
+    },
+    {
+      "type": "subtitle",
+      "data": "Пример:"
+    },
+    {
+      "type": "code",
+      "data": "Uses Crt;\r\n \r\n  Begin\r\n   Randomize;\r\n   Repeat\r\n    { Выводим текст случайными цветами }\r\n    TextAttr:=Random(256);\r\n    Write('!');\r\n   Until KeyPressed;\r\n  End."
+    }
+  ]
+}

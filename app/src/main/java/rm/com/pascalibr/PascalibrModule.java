@@ -28,10 +28,6 @@ final class PascalibrModule {
     this.app = app;
   }
 
-  @Provides @Singleton LinearLayoutManager provideLayoutManager() {
-    return new LinearLayoutManager(app.getApplicationContext());
-  }
-
   @Provides @Singleton ArticleAdapter provideArticleAdapter() {
     return new ArticleAdapter();
   }

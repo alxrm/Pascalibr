@@ -8,7 +8,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import rm.com.pascalibr.R;
 import rm.com.pascalibr.model.CatalogEntry;
-import rm.com.pascalibr.util.Types;
+import rm.com.pascalibr.util.Converters;
 
 /**
  * Created by alex
@@ -27,10 +27,10 @@ public final class CatalogEntryHolder extends BaseHolder<CatalogEntry> {
     name.setText(model.name);
     type.setText(model.type);
 
-    icon.setText(Types.lettersOf(model.type));
+    icon.setText(Converters.lettersOf(model.type));
     icon.getBackground()
         .setColorFilter(
-            new PorterDuffColorFilter(Types.colorOf(model.type), PorterDuff.Mode.MULTIPLY));
+            new PorterDuffColorFilter(Converters.colorOf(model.type), PorterDuff.Mode.MULTIPLY));
 
     itemView.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {

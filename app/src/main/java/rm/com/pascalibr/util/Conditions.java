@@ -9,7 +9,8 @@ import android.support.annotation.Nullable;
 
 public final class Conditions {
 
-  private Conditions() {}
+  private Conditions() {
+  }
 
   public static void check(boolean clause) {
     if (!clause) throw new IllegalStateException("Check failed");

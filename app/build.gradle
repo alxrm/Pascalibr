@@ -2,38 +2,41 @@ apply plugin: 'com.android.application'
 apply from: "${rootDir}/constants.gradle"
 
 android {
-	compileSdkVersion targetSdk
-	buildToolsVersion "25.0.0"
-	defaultConfig {
-		applicationId "rm.com.pascalibr"
-		minSdkVersion minSdk
-		targetSdkVersion targetSdk
-		versionCode 1
-		versionName "1.0"
-		vectorDrawables.useSupportLibrary = true
-	}
-	buildTypes {
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-		}
-	}
-	dexOptions {
-		javaMaxHeapSize "2g"
-	}
+  compileSdkVersion targetSdk
+  buildToolsVersion "25.0.0"
+  defaultConfig {
+    applicationId "rm.com.pascalibr"
+    minSdkVersion minSdk
+    targetSdkVersion targetSdk
+    versionCode 1
+    versionName "1.0"
+    vectorDrawables.useSupportLibrary = true
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  dexOptions {
+    javaMaxHeapSize "2g"
+  }
 }
 
 dependencies {
-	compile fileTree(dir: 'libs', include: ['*.jar'])
-	compile 'com.google.code.gson:gson:2.8.0'
+  compile fileTree(dir: 'libs', include: ['*.jar'])
 
-	compile supportDeps.appCompat
-	compile supportDeps.design
-	compile supportDeps.recyclerView
+  compile supportDeps.appCompat
+  compile supportDeps.design
+  compile supportDeps.recyclerView
 
-	compile square.butterknife
-	compile square.dagger
+  compile square.butterknife
+  compile square.dagger
 
-	annotationProcessor square.butterknifeCompiler
-	annotationProcessor square.daggerCompiler
+  annotationProcessor square.butterknifeCompiler
+  annotationProcessor square.daggerCompiler
+
+  compile 'com.google.code.gson:gson:2.8.0'
+//  compile 'com.github.softwee:codeview-android:1.2.0'
+  compile 'com.pddstudio:highlightjs-android:1.3.0'
 }

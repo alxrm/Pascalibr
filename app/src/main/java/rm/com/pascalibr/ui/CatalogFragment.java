@@ -3,15 +3,12 @@ package rm.com.pascalibr.ui;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import butterknife.BindString;
-import butterknife.BindView;
 import java.util.List;
 import javax.inject.Inject;
 import rm.com.pascalibr.PascalibrApplication;
@@ -25,11 +22,9 @@ import rm.com.pascalibr.ui.holder.BaseHolder;
 /**
  * Created by alex
  */
-public final class CatalogFragment extends BaseFragment
+public final class CatalogFragment extends BaseContentFragment
     implements ProviderListener<List<CatalogEntry>>, BaseHolder.OnClickListener<CatalogEntry> {
 
-  @BindView(R.id.catalog_loader) ProgressBar loader;
-  @BindView(R.id.catalog_list) RecyclerView catalog;
   @BindString(R.string.path_catalog) String providerSource;
 
   @Inject CatalogProvider provider;
@@ -46,13 +41,13 @@ public final class CatalogFragment extends BaseFragment
 
   @Nullable @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_catalog, container, false);
+    return inflater.inflate(R.layout.fragment_content, container, false);
   }
 
   @Override public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     adapter.setOnClickListener(this);
-    catalog.setAdapter(adapter);
+    content.setAdapter(adapter);
     provider.retrieve(providerSource, this);
   }
 
@@ -61,15 +56,20 @@ public final class CatalogFragment extends BaseFragment
     super.onCreateOptionsMenu(menu, inflater);
   }
 
-  @NonNull @Override final String getTitle() {
-    return "Справочник";
-  }
-
   @Override public final void onProvide(@NonNull List<CatalogEntry> payload) {
     loader.setVisibility(View.GONE);
     adapter.updateData(payload);
   }
 
   @Override public final void onItemClick(@NonNull CatalogEntry item) {
+    navigateTo(ArticleFragment.newInstance(item.name, item.fileName));
+  }
+
+  @NonNull @Override final String getTitle() {
+    return "Справочник";
+  }
+
+  @Override final boolean hasBackButton() {
+    return false;
   }
 }

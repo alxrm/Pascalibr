@@ -14,15 +14,18 @@ public final class MainActivity extends AppCompatActivity {
     navigateTo(CatalogFragment.newInstance(), true);
   }
 
-  final void navigateTo(@NonNull BaseFragment fragment) {
+  final void navigateTo(@NonNull BaseContentFragment fragment) {
     navigateTo(fragment, false);
   }
 
-  private void navigateTo(@NonNull BaseFragment fragment, boolean root) {
-    final FragmentTransaction fragmentTransaction =
-        getFragmentManager().beginTransaction().replace(R.id.root, fragment);
+  private void navigateTo(@NonNull BaseContentFragment fragment, boolean root) {
+    final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction()
+        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+        .replace(R.id.root, fragment);
 
-    if (!root) fragmentTransaction.addToBackStack(null);
+    if (!root) {
+      fragmentTransaction.addToBackStack(null);
+    }
 
     fragmentTransaction.commit();
   }
