@@ -7,14 +7,12 @@ import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import java.util.ArrayList;
 import javax.inject.Inject;
 import rm.com.pascalibr.PascalibrApplication;
 import rm.com.pascalibr.R;
 import rm.com.pascalibr.data.ArticleProvider;
 import rm.com.pascalibr.data.ProviderListener;
 import rm.com.pascalibr.model.Article;
-import rm.com.pascalibr.model.DescriptionEntry;
 import rm.com.pascalibr.ui.adapter.ArticleAdapter;
 import rm.com.pascalibr.util.Converters;
 
@@ -22,7 +20,8 @@ import rm.com.pascalibr.util.Converters;
  * Created by alex
  */
 
-public final class ArticleFragment extends BaseContentFragment implements ProviderListener<Article> {
+public final class ArticleFragment extends BaseContentFragment
+    implements ProviderListener<Article> {
   static final String KEY_ARTICLE_NAME = "KEY_ARTICLE_NAME";
   static final String KEY_ARTICLE_SOURCE = "KEY_ARTICLE_SOURCE";
 
@@ -57,7 +56,7 @@ public final class ArticleFragment extends BaseContentFragment implements Provid
     super.onViewCreated(view, savedInstanceState);
     content.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.color_primary_light));
     content.setAdapter(adapter);
-    provider.retrieve(providerSource, this);
+    provider.provide(providerSource, this);
   }
 
   @Override public void onProvide(@NonNull Article payload) {
@@ -65,15 +64,15 @@ public final class ArticleFragment extends BaseContentFragment implements Provid
     adapter.updateData(Converters.descriptionSetOf(payload));
   }
 
-  @NonNull @Override final String getTitle() {
+  @NonNull @Override String getTitle() {
     return articleTitle;
   }
 
-  @Override final boolean hasBackButton() {
+  @Override boolean hasBackButton() {
     return true;
   }
 
-  @Override protected final void unwrapArguments(@NonNull Bundle args) {
+  @Override protected void unwrapArguments(@NonNull Bundle args) {
     super.unwrapArguments(args);
 
     articleTitle = args.getString(KEY_ARTICLE_NAME, "Ошибка");

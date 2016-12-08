@@ -1,9 +1,8 @@
 package rm.com.pascalibr.model;
 
 /**
- * Created by alex
+ * тип данных элемента списка статей
  */
-
 public final class CatalogEntry {
 
   public final String name;

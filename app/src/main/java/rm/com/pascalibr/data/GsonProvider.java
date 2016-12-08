@@ -9,7 +9,11 @@ import rm.com.pascalibr.util.Conditions;
 import rm.com.pascalibr.util.Files;
 
 /**
- * Created by alex
+ * Обобщённый класс для чтения данных из JSON файлов
+ * с помощью библиотеки GSON
+ *
+ * @param <T> тип данных, который должен вернуться
+ * в результате чтения и десериализации
  */
 public abstract class GsonProvider<T> {
 
@@ -28,25 +32,48 @@ public abstract class GsonProvider<T> {
     this.assets = assets;
   }
 
-  public void retrieve(@NonNull final String path, @NonNull final ProviderListener<T> callback) {
+  /**
+   * основной метод, который вызывается при чтении данных из JSON файла
+   * метод выполняет чтение в фоновом потоке
+   *
+   * @param path путь к JSON файлу
+   * @param callback экземпляр вызывающего класса,
+   * реализующего интерфейс слушателя результата,
+   * как только файл будет прочитан и десериализован,
+   * в главном потоке сразу же придут данные в вызывающий класс
+   */
+  public void provide(@NonNull final String path, @NonNull final ProviderListener<T> callback) {
     Conditions.checkNotNull(callback);
 
     executor.submit(new Runnable() {
       @Override public void run() {
         final String raw = Files.readText(assets, path);
-        final T result = parse(raw);
+        final T result = parse(raw != null ? raw : "");
 
         Conditions.checkNotNull(result, "Result cannot be null");
 
         cachedResult = result;
-        sendResult(callback, result);
+        sendResult(result, callback);
       }
     });
   }
 
-  @NonNull protected abstract T parse(String src);
+  /**
+   * приватный метод, вызывающийся при десериализации текста JSON файла в конкретный тип данных
+   * метод абстрактный, так как для каждого типа данных может быть своя реализация чтения
+   *
+   * @param src содержимое JSON файла в текстовом формате
+   * @return возвращает десериализованный объект
+   */
+  @NonNull protected abstract T parse(@NonNull String src);
 
-  protected void sendResult(@NonNull final ProviderListener<T> callback, @NonNull final T result) {
+  /**
+   * метод отправки результата вызывающему классу в главном потоке
+   *
+   * @param result объект с результатом чтения файла
+   * @param callback экземпляр вызывающего класса, реализующего интерфейс слушателя результата
+   */
+  protected void sendResult(@NonNull final T result, @NonNull final ProviderListener<T> callback) {
     mainThreadHandler.post(new Runnable() {
       @Override public void run() {
         callback.onProvide(result);

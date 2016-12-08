@@ -55,7 +55,7 @@ public final class CatalogFragment extends BaseContentFragment
 
     adapter.setOnClickListener(this);
     content.setAdapter(adapter);
-    provider.retrieve(providerSource, this);
+    provider.provide(providerSource, this);
   }
 
   @Override public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -69,12 +69,12 @@ public final class CatalogFragment extends BaseContentFragment
     searchView.setOnQueryTextListener(this);
   }
 
-  @Override public final void onProvide(@NonNull List<CatalogEntry> payload) {
+  @Override public void onProvide(@NonNull List<CatalogEntry> payload) {
     toggleContent(true);
     adapter.updateData(payload);
   }
 
-  @Override public final void onItemClick(@NonNull CatalogEntry item) {
+  @Override public void onItemClick(@NonNull CatalogEntry item) {
     navigateTo(ArticleFragment.newInstance(item.name, item.fileName));
   }
 
@@ -100,11 +100,11 @@ public final class CatalogFragment extends BaseContentFragment
     provider.find(nextQuery, this);
   }
 
-  @NonNull @Override final String getTitle() {
+  @NonNull @Override String getTitle() {
     return title;
   }
 
-  @Override final boolean hasBackButton() {
+  @Override boolean hasBackButton() {
     return false;
   }
 }

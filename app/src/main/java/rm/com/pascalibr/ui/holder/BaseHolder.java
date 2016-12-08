@@ -26,7 +26,7 @@ public abstract class BaseHolder<T> extends RecyclerView.ViewHolder {
 
   abstract public void bind(@NonNull T model);
 
-  final public void setOnClickListener(@Nullable OnClickListener<T> clickListener) {
+  public final void setOnClickListener(@Nullable OnClickListener<T> clickListener) {
     this.clickListener = clickListener;
   }
 }
