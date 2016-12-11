@@ -8,9 +8,8 @@ import rm.com.pascalibr.R;
 import rm.com.pascalibr.model.DescriptionEntry;
 
 /**
- * Created by alex
+ * элемент статьи, содержащий текст с описанием
  */
-
 public final class TextEntryHolder extends DescriptionEntryHolder {
 
   @BindView(R.id.item_article_text) TextView text;

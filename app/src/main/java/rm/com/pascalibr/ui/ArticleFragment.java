@@ -16,10 +16,6 @@ import rm.com.pascalibr.model.Article;
 import rm.com.pascalibr.ui.adapter.ArticleAdapter;
 import rm.com.pascalibr.util.Converters;
 
-/**
- * Created by alex
- */
-
 public final class ArticleFragment extends BaseContentFragment
     implements ProviderListener<Article> {
   static final String KEY_ARTICLE_NAME = "KEY_ARTICLE_NAME";
@@ -54,13 +50,14 @@ public final class ArticleFragment extends BaseContentFragment
 
   @Override public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
+    toggleContent(false);
     content.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.color_primary_light));
     content.setAdapter(adapter);
     provider.provide(providerSource, this);
   }
 
   @Override public void onProvide(@NonNull Article payload) {
-    loader.setVisibility(View.GONE);
+    toggleContent(true);
     adapter.updateData(Converters.descriptionSetOf(payload));
   }
 

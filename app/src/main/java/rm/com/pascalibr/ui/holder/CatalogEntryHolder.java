@@ -11,7 +11,7 @@ import rm.com.pascalibr.model.CatalogEntry;
 import rm.com.pascalibr.util.Converters;
 
 /**
- * Created by alex
+ * элемент списка статей
  */
 public final class CatalogEntryHolder extends BaseHolder<CatalogEntry> {
 
@@ -23,6 +23,11 @@ public final class CatalogEntryHolder extends BaseHolder<CatalogEntry> {
     super(itemView);
   }
 
+  /**
+   * метод привязки статьи из списка, здесь же происходит подключение слушателя нажатий
+   *
+   * @param model данные, которые должны быть привязаны и отрисованы
+   */
   @Override public void bind(@NonNull final CatalogEntry model) {
     name.setText(model.name);
     type.setText(model.type);

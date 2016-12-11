@@ -23,7 +23,7 @@ public final class MainActivity extends AppCompatActivity {
 
   private void navigateTo(@NonNull BaseContentFragment fragment, boolean root) {
     final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction()
-        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         .replace(R.id.root, fragment);
 
     if (!root) {

@@ -10,9 +10,8 @@ import rm.com.pascalibr.R;
 import rm.com.pascalibr.model.DescriptionEntry;
 
 /**
- * Created by alex
+ * элемент статьи, содержащий код
  */
-
 public final class CodeEntryHolder extends DescriptionEntryHolder {
 
   @BindView(R.id.item_article_code) HighlightJsView codeView;
