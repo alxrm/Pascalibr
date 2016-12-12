@@ -8,4 +8,4 @@
 
 3. Чтобы скачать последнюю актуальную версию исходников, воспользуйтесь [ссылкой на скачивание](https://github.com/alxrm/Pascalibr/archive/master.zip)
 
-4. Последний актуальный файл apk лежит по этому пути [~/Pascalibr/build/app-release.apk](https://github.com/alxrm/Pascalibr/blob/master/build/app-release.apk?raw=true)
+4. Последний актуальный файл apk лежит по этому пути [~/Pascalibr/Pascalibr.apk](https://github.com/alxrm/Pascalibr/blob/master/Pascalibr.apk?raw=true)
