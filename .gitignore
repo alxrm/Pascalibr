@@ -6,4 +6,8 @@
 .DS_Store
 /build
 /captures
+/parser
 .externalNativeBuild
+.idea/
+app/libs/
+parser/PascalibrDataProvider/result/
