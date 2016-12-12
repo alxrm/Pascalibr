@@ -25,7 +25,7 @@ import rm.com.pascalibr.ui.holder.BaseHolder;
 /**
  * экран отображения списка статей
  *
- * реализует разные интерфейсы:
+ * реализует интерфейсы:
  *
  * {@link ProviderListener}, {@link BaseHolder.OnClickListener},
  * {@link MenuItemCompat.OnActionExpandListener}, {@link SearchView.OnQueryTextListener}
@@ -41,9 +41,9 @@ public final class CatalogFragment extends BaseContentFragment
   @Inject CatalogAdapter adapter;
 
   /**
-   * метод создания нового окна со списком статей
+   * метод создания нового экрана со списком статей
    *
-   * @return новый экземпляр окна
+   * @return новый экземпляр экрана
    */
   @NonNull public static CatalogFragment newInstance() {
     return new CatalogFragment();
@@ -61,20 +61,9 @@ public final class CatalogFragment extends BaseContentFragment
   }
 
   /**
-   * метод, вызываемый при создании интерфейса экрана
-   *
-   * @param inflater системный класс для преобразования XML вёрстки в объект интерфейса в коде
-   * @param container родительский элемент, в котором отрисовывается окно
-   * @param savedInstanceState сохранённое состояние, не используется здесь
-   * @return только что созданный объект с интерфейсом экрана
-   */
-  @Nullable @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
-      Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_content, container, false);
-  }
-
-  /**
-   * здесь происходит запрос на чтение данных из файла, подключения адаптера {@link CatalogAdapter}
+   * метод, вызываемый после создания интерфейса окна
+   * здесь происходит запрос на чтение данных из файла через {@link CatalogProvider},
+   * подключение адаптера {@link CatalogAdapter}
    * и настройки слушателя нажатий на элемент в списке статей
    *
    * @param view корневой элемент, в котором отрисовываются элементы экрана

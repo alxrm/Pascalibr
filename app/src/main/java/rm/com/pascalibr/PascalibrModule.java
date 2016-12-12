@@ -3,12 +3,12 @@ package rm.com.pascalibr;
 import android.content.res.AssetManager;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v7.widget.LinearLayoutManager;
 import com.google.gson.Gson;
 import dagger.Module;
 import dagger.Provides;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import rm.com.pascalibr.data.ArticleProvider;
 import rm.com.pascalibr.data.CatalogProvider;
@@ -16,11 +16,11 @@ import rm.com.pascalibr.ui.adapter.ArticleAdapter;
 import rm.com.pascalibr.ui.adapter.CatalogAdapter;
 
 /**
- * Created by alex
+ * класс-контейнер, нужен для библиотеки, здесь инициализируются значения, которые позже будут
+ * записаны в соответствующие поля, помеченные аннотацией {@link Inject}, в классах, указанных в
+ * {@link PascalibrComponent}
  */
-
-@Module
-final class PascalibrModule {
+@Module final class PascalibrModule {
 
   private final PascalibrApplication app;
 
